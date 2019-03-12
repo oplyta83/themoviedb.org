@@ -12,6 +12,7 @@
 		BC5006A02231F5E9004B66A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC50069E2231F5E9004B66A5 /* Main.storyboard */; };
 		BC5006A22231F5F4004B66A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5006A12231F5F4004B66A5 /* Assets.xcassets */; };
 		BC5006A52231F5F4004B66A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5006A32231F5F4004B66A5 /* LaunchScreen.storyboard */; };
+		BC5006B122323B22004B66A5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5006B022323B22004B66A5 /* DetailViewController.swift */; };
 		C840A3F8F9CB0ADF5FA30E1E /* Pods_TestTrabjo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C11EF2A2689412BF70C643 /* Pods_TestTrabjo.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		BC5006A12231F5F4004B66A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC5006A42231F5F4004B66A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC5006A62231F5F4004B66A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5006B022323B22004B66A5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				BC5006A12231F5F4004B66A5 /* Assets.xcassets */,
 				BC5006A32231F5F4004B66A5 /* LaunchScreen.storyboard */,
 				BC5006A62231F5F4004B66A5 /* Info.plist */,
+				BC5006B022323B22004B66A5 /* DetailViewController.swift */,
 			);
 			path = TestTrabjo;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5006B122323B22004B66A5 /* DetailViewController.swift in Sources */,
 				BC50069D2231F5E9004B66A5 /* ViewController.swift in Sources */,
 				BC50069B2231F5E9004B66A5 /* AppDelegate.swift in Sources */,
 			);

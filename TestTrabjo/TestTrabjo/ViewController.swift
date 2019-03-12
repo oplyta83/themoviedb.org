@@ -34,13 +34,17 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(URLthemoviedbPopular)
+        tableView.estimatedRowHeight = 85.0
+        tableView.rowHeight = UITableView.automaticDimension
         callAlamoFire(url: URLthemoviedbPopular)
+        
     }
     
     func callAlamoFire(url : String){
         Alamofire.request(url).responseJSON(completionHandler: {
             response in
             self.parseData(JSONData: response.data!)
+            
         })
     }
     
@@ -75,6 +79,23 @@ class TableViewController: UITableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("hola seba")
+        
+        let indexPath = self.tableView.indexPathForSelectedRow?.row
+        
+        let vc = DetailViewController()
+        
+        vc.titileMovie = posts[indexPath!].nameMovie
+        vc.imgMovie = posts[indexPath!].mainImage
+        vc.popularity = String(posts[indexPath!].popularity)
+        vc.legOrigin = posts[indexPath!].original_language
+        vc.titOrigin = posts[indexPath!].original_title
+        vc.date = posts[indexPath!].release_date
+        vc.overview = posts[indexPath!].overview
+        
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
@@ -98,10 +119,22 @@ class TableViewController: UITableViewController {
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = self.tableView.indexPathForSelectedRow?.row
+        
+        let vc = segue.destination as! DetailViewController
+        
+        vc.titileMovie = posts[indexPath!].nameMovie
+        vc.imgMovie = posts[indexPath!].mainImage
+        vc.popularity = String(posts[indexPath!].popularity)
+        vc.legOrigin = posts[indexPath!].original_language
+        vc.titOrigin = posts[indexPath!].original_title
+        vc.date = posts[indexPath!].release_date
+        vc.overview = posts[indexPath!].overview
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
