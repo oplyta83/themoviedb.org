@@ -79,7 +79,7 @@ class TableViewController: UITableViewController {
         }
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         print("hola seba")
         
         let indexPath = self.tableView.indexPathForSelectedRow?.row
@@ -93,7 +93,6 @@ class TableViewController: UITableViewController {
         vc.titOrigin = posts[indexPath!].original_title
         vc.date = posts[indexPath!].release_date
         vc.overview = posts[indexPath!].overview
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -104,17 +103,11 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         
         let mainImageView = cell?.viewWithTag(1) as? UIImageView
-        
         mainImageView?.image = posts[indexPath.row].mainImage
-        
         let mainLabel = cell?.viewWithTag(2) as? UILabel
-        
         mainLabel?.text = posts[indexPath.row].nameMovie
-        
         let mainPopularity = cell?.viewWithTag(3) as? UILabel
-        
         mainPopularity?.text = String(posts[indexPath.row].popularity)
-        
         return cell!
     }
     

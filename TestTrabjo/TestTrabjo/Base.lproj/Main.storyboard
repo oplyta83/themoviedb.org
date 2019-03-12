@@ -71,7 +71,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7dL-TH-I6j" kind="show" id="GDu-jf-WNh"/>
+                                    <segue destination="7dL-TH-I6j" kind="show" id="Y4i-b4-Tpm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
